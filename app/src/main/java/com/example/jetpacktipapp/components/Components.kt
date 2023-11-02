@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.sp
 @ExperimentalMaterial3Api
 @Composable
 fun InputField(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     valueState: MutableState<String>,
     labelId: String,
     enabled: Boolean,
