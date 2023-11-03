@@ -14,14 +14,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 val IconButtonSizeModifier = Modifier.size(40.dp)
 @Composable
 fun RoundIconButton(
-    modifier: Modifier = Modifier,
     imageVector: ImageVector,
     onClick: () -> Unit,
+    modifier: Modifier = Modifier,
     tint: Color = Color.Black.copy(alpha = 0.8f),
     backgroundColor: Color = MaterialTheme.colorScheme.background,
     elevation: CardElevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
