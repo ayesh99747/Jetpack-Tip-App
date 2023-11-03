@@ -1,6 +1,8 @@
 package com.example.jetpacktipapp.widgets
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -18,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 val IconButtonSizeModifier = Modifier.size(40.dp)
+
 @Composable
 fun RoundIconButton(
     imageVector: ImageVector,
@@ -27,7 +30,7 @@ fun RoundIconButton(
     backgroundColor: Color = MaterialTheme.colorScheme.background,
     elevation: CardElevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
 ) {
-    Card (
+    Card(
         modifier = modifier
             .padding(all = 4.dp)
             .clickable { onClick.invoke() }
@@ -38,6 +41,11 @@ fun RoundIconButton(
         ),
         elevation = elevation
     ) {
-        Icon(imageVector = imageVector, contentDescription = "Plus or Minus Icon", tint = tint)
+        Box (
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(imageVector = imageVector, contentDescription = "Plus or Minus Icon", tint = tint)
+        }
     }
 }
